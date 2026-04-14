@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium E-commerce Product Cards</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons for premium feel -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="showcase">
+        <h1>Product <span class="gradient-text">Cards</span></h1>
+        
+        <div class="cards-wrapper">
+            <!-- Standard E-commerce Card -->
+            <div class="product-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1999&auto=format&fit=crop" alt="Premium Watch">
+                    <span class="badge badge-sale">SALE</span>
+                    <button class="wishlist-btn" title="Add to Wishlist">
+                        <i data-lucide="heart"></i>
+                    </button>
+                    <div class="quick-view">Quick View</div>
+                </div>
+                <div class="card-body">
+                    <p class="category">Electronics</p>
+                    <h3 class="title">Apex Series Watch</h3>
+                    <div class="rating">
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star"></i>
+                        <span>(48)</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price">199.00 DA</span>
+                        <span class="old-price">249.00 DA</span>
+                    </div>
+                    <button class="add-to-cart">
+                        <i data-lucide="shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Featured Card (More prominent) -->
+            <div class="product-card featured">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=2070&auto=format&fit=crop" alt="Premium Headphones">
+                    <span class="badge badge-new">NEW</span>
+                    <button class="wishlist-btn active" title="Remove from Wishlist">
+                        <i data-lucide="heart"></i>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <p class="category">Audio</p>
+                    <h3 class="title">Pexilio Sound Pro</h3>
+                    <div class="rating">
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star" class="filled"></i>
+                        <i data-lucide="star" class="filled"></i>
+                        <span>(120)</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price">349.00 DA</span>
+                    </div>
+                    <button class="add-to-cart primary">
+                        <i data-lucide="shopping-cart"></i> Order Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mini Card / List Item Style -->
+            <div class="product-card mini">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2070&auto=format&fit=crop" alt="Sneaker">
+                </div>
+                <div class="card-body">
+                    <h3 class="title">Sport Glide X</h3>
+                    <span class="price">120.00 DA</span>
+                    <button class="wishlist-btn mini-wish">
+                        <i data-lucide="heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

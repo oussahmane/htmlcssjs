@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Filter Sidebar | Pexilio Algeria</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="filter-page">
+    
+    <!-- Mobile Filter Bar (Hidden on Desktop) -->
+    <div class="mobile-filter-bar">
+        <button class="filter-trigger" id="mobile-filter-btn">
+            <i data-lucide="sliders-horizontal"></i>
+            <span>All Filters</span>
+        </button>
+        <span class="active-count">3 Filters</span>
+    </div>
+
+    <!-- Backdrop Overlay -->
+    <div class="filter-overlay" id="overlay"></div>
+
+    <!-- Reconstructed Filter Sidebar -->
+    <aside class="filter-sidebar" id="filter-sidebar">
+        
+        <!-- Sidebar Header -->
+        <div class="filter-header">
+            <h3>Filters</h3>
+            <div class="header-actions">
+                <button class="btn-clear">Clear All</button>
+                <button class="btn-close" id="filter-close"><i data-lucide="x"></i></button>
+            </div>
+        </div>
+
+        <!-- Scrollable Content -->
+        <div class="filter-body">
+            
+            <!-- Price Range -->
+            <div class="filter-section">
+                <div class="section-title">
+                    <span>Price Range</span>
+                    <i data-lucide="chevron-up" size="16"></i>
+                </div>
+                <div class="section-content">
+                    <div class="range-controls">
+                        <div class="price-input-group">
+                            <div class="input-wrap">
+                                <span class="currency">DA</span>
+                                <input type="number" value="150" class="price-input">
+                            </div>
+                            <span class="dash"></span>
+                            <div class="input-wrap">
+                                <span class="currency">DA</span>
+                                <input type="number" value="3500" class="price-input">
+                            </div>
+                        </div>
+                        <!-- Range Slider Logic -->
+                        <div class="range-slider">
+                            <div class="slider-track"></div>
+                            <input type="range" min="0" max="5000" value="150" class="input-min">
+                            <input type="range" min="0" max="5000" value="3500" class="input-max">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="filter-section">
+                <div class="section-title">
+                    <span>Categories</span>
+                    <i data-lucide="chevron-up" size="16"></i>
+                </div>
+                <div class="section-content">
+                    <div class="options-list">
+                        <label class="custom-check">
+                            <input type="checkbox" checked>
+                            <span class="box"></span>
+                            <span class="label">Smartphones</span>
+                            <span class="count">12</span>
+                        </label>
+                        <label class="custom-check">
+                            <input type="checkbox">
+                            <span class="box"></span>
+                            <span class="label">Laptops</span>
+                            <span class="count">8</span>
+                        </label>
+                        <label class="custom-check">
+                            <input type="checkbox">
+                            <span class="box"></span>
+                            <span class="label">Accessories</span>
+                            <span class="count">45</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brands with Search -->
+            <div class="filter-section">
+                <div class="section-title">
+                    <span>Brands</span>
+                    <i data-lucide="chevron-up" size="16"></i>
+                </div>
+                <div class="section-content">
+                    <div class="filter-search">
+                        <i data-lucide="search" size="16"></i>
+                        <input type="text" placeholder="Search brands...">
+                    </div>
+                    <div class="options-list">
+                        <label class="custom-check">
+                            <input type="checkbox">
+                            <span class="box"></span>
+                            <span class="label">Apple</span>
+                        </label>
+                        <label class="custom-check">
+                            <input type="checkbox">
+                            <span class="box"></span>
+                            <span class="label">Sony</span>
+                        </label>
+                        <label class="custom-check">
+                            <input type="checkbox">
+                            <span class="box"></span>
+                            <span class="label">Samsung</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colors -->
+            <div class="filter-section">
+                <div class="section-title">
+                    <span>Colors</span>
+                    <i data-lucide="chevron-up" size="16"></i>
+                </div>
+                <div class="section-content">
+                    <div class="color-grid">
+                        <label class="color-item" title="Space Black">
+                            <input type="checkbox" name="color">
+                            <span class="swatch" style="background: #0f172a;"></span>
+                        </label>
+                        <label class="color-item active" title="Royal Blue">
+                            <input type="checkbox" name="color" checked>
+                            <span class="swatch" style="background: #6366f1;"></span>
+                        </label>
+                        <label class="color-item" title="Sunset Rose">
+                            <input type="checkbox" name="color">
+                            <span class="swatch" style="background: #f43f5e;"></span>
+                        </label>
+                        <label class="color-item" title="Forest Emerald">
+                            <input type="checkbox" name="color">
+                            <span class="swatch" style="background: #10b981;"></span>
+                        </label>
+                        <label class="color-item" title="Pure White">
+                            <input type="checkbox" name="color">
+                            <span class="swatch" style="background: #ffffff; border: 1px solid #ddd;"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sticky Footer Action -->
+        <div class="filter-footer">
+            <button class="btn-apply">View 158 Results</button>
+        </div>
+    </aside>
+
+    <main class="demo-content">
+        <div class="header">
+            <h1>Trending <span class="gradient-text">Gadgets</span></h1>
+            <p>158 results found in Algeria</p>
+        </div>
+        <div class="product-grid-sim">
+            <div class="item-sim"></div>
+            <div class="item-sim"></div>
+            <div class="item-sim"></div>
+            <div class="item-sim"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Mini-Cart Drawer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Cart Toggle Button (Demonstration only) -->
+    <div style="height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--bg-main);">
+        <button class="cart-trigger" id="cart-open">
+            <i data-lucide="shopping-bag"></i>
+            <span>Open Mini Cart</span>
+            <span class="badge">3</span>
+        </button>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Premium Mini-Cart Drawer -->
+    <aside class="cart-drawer" id="cart-drawer">
+        <!-- Header -->
+        <div class="cart-header">
+            <h3>Your Cart <span class="item-count">(3 items)</span></h3>
+            <button class="close-btn" id="cart-close">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+        <!-- Cart Items List -->
+        <div class="cart-items">
+            <!-- Item 01 -->
+            <div class="cart-item">
+                <div class="item-img" style="background: #1e293b;"></div>
+                <div class="item-details">
+                    <div class="top-row">
+                        <h4>Pexilio Sound Pro</h4>
+                        <button class="remove-btn"><i data-lucide="trash-2"></i></button>
+                    </div>
+                    <p class="variant">Color: Stellar Black</p>
+                    <div class="price-row">
+                        <div class="quantity-picker">
+                            <button class="qty-btn dec"><i data-lucide="minus"></i></button>
+                            <span class="qty-val">1</span>
+                            <button class="qty-btn inc"><i data-lucide="plus"></i></button>
+                        </div>
+                        <span class="item-price">349.00 DA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 02 -->
+            <div class="cart-item">
+                <div class="item-img" style="background: #312e81;"></div>
+                <div class="item-details">
+                    <div class="top-row">
+                        <h4>Apex Series Watch</h4>
+                        <button class="remove-btn"><i data-lucide="trash-2"></i></button>
+                    </div>
+                    <p class="variant">Size: 44mm</p>
+                    <div class="price-row">
+                        <div class="quantity-picker">
+                            <button class="qty-btn dec"><i data-lucide="minus"></i></button>
+                            <span class="qty-val">2</span>
+                            <button class="qty-btn inc"><i data-lucide="plus"></i></button>
+                        </div>
+                        <span class="item-price">398.00 DA</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Empty state hidden by default -->
+            <div class="cart-empty" style="display: none;">
+                <i data-lucide="shopping-cart"></i>
+                <p>Your cart is empty.</p>
+                <button class="btn-shop">Back to Shop</button>
+            </div>
+        </div>
+
+        <!-- Footer / Checkout -->
+        <div class="cart-footer">
+            <div class="subtotal-row">
+                <span>Subtotal</span>
+                <span class="total-val">747.00 DA</span>
+            </div>
+            <p class="tax-info">Shipping & taxes calculated at checkout. <br> <strong>Cash on Delivery (Livraison à domicile) available in Algeria.</strong></p>
+            <button class="btn-checkout">
+                <span>Proceed to Checkout</span>
+                <i data-lucide="arrow-right"></i>
+            </button>
+            <button class="btn-continue" id="cart-continue">Continue Shopping</button>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

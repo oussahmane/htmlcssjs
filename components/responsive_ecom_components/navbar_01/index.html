@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium E-commerce Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons for premium feel -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Premium Responsive Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Mobile Menu Toggle (Left on Mobile) -->
+            <div class="hamburger" id="sidebar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Branding / Logo -->
+            <a href="#" class="logo">
+                <span>Pexilio</span> <small>Algeria</small>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#deals">Deals</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <!-- E-commerce Actions & Search -->
+            <div class="nav-actions">
+                <!-- Desktop Search Bar -->
+                <div class="search-box">
+                    <input type="text" placeholder="Search products...">
+                    <button class="search-btn"><i data-lucide="search"></i></button>
+                </div>
+
+                <!-- Icons & User Actions -->
+                <div class="icon-group">
+                    <a href="#" class="nav-icon desktop-only" title="Account">
+                        <i data-lucide="user"></i>
+                    </a>
+                    <a href="#" class="nav-icon desktop-only" title="Wishlist">
+                        <i data-lucide="heart"></i>
+                    </a>
+                    <a href="#" class="nav-icon cart-icon" title="Cart">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="cart-badge">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar Overlay & Sidebar for Mobile/Tablet -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="logo"><span>Pexilio</span> <small>DZ</small></a>
+            <div id="sidebar-close" style="cursor: pointer;"><i data-lucide="x"></i></div>
+        </div>
+        
+        <!-- Mobile Search in Sidebar -->
+        <div class="sidebar-search">
+            <input type="text" placeholder="Search products...">
+            <button><i data-lucide="search"></i></button>
+        </div>
+
+        <ul class="sidebar-links">
+            <li><a href="#shop"><i data-lucide="shopping-bag"></i> All Products</a></li>
+            <li><a href="#categories"><i data-lucide="grid"></i> Categories</a></li>
+            <li><a href="#deals"><i data-lucide="tag"></i> Special Offers</a></li>
+            <li><hr class="divider"></li> <!-- Logical separation -->
+            <li><a href="#account"><i data-lucide="user"></i> My Account</a></li>
+            <li><a href="#wishlist"><i data-lucide="heart"></i> Wishlist</a></li>
+            <li><a href="#orders"><i data-lucide="package"></i> Track Order</a></li>
+            <li><a href="#help"><i data-lucide="help-circle"></i> Help & Support</a></li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <p>&copy; 2026 Pexilio Commerce</p>
+        </div>
+    </aside>
+
+    <!-- Content Placeholder to show scroll effects -->
+    <main style="background: var(--bg-main); min-height: 200vh; padding-top: 120px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+        <div style="max-width: 800px; text-align: center; color: var(--text-main); padding: 0 2rem;">
+            <h1 style="font-size: clamp(2.5rem, 8vw, 4rem); margin-bottom: 2rem;">Seamless <span class="gradient-text">Shopping</span> Experience</h1>
+            <p style="color: #94a3b8; font-size: 1.2rem; line-height: 1.6;">This premium navbar is designed for e-commerce flexibility. It automatically adjusts for mobile, features a built-in search, and tracks customer interactions seamlessly.</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

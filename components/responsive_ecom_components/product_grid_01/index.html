@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Product Grid Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Grid Header -->
+        <div class="grid-header">
+            <div class="header-info">
+                <h1>Our <span class="gradient-text">Top Selection</span></h1>
+                <p>Browse through our hand-picked premium collection.</p>
+            </div>
+            <div class="grid-controls">
+                <button class="control-btn" title="Grid View"><i data-lucide="layout-grid"></i></button>
+                <button class="control-btn ghost" title="List View"><i data-lucide="list"></i></button>
+                <div class="sort-select">
+                    <select>
+                        <option>Sort by: Newest</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Best Rating</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="main-product-grid">
+            <!-- Items will be animated on entrance -->
+            <div class="grid-item">
+                <div class="placeholder-img" style="background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);"></div>
+                <div class="item-info">
+                    <h3>Premium Item 01</h3>
+                    <div class="price">299.00 DA</div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="placeholder-img" style="background: linear-gradient(135deg, #c7d2fe 0%, #818cf8 100%);"></div>
+                <div class="item-info">
+                    <h3>Premium Item 02</h3>
+                    <div class="price">199.00 DA</div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="placeholder-img" style="background: linear-gradient(135deg, #ddd6fe 0%, #a78bfa 100%);"></div>
+                <div class="item-info">
+                    <h3>Premium Item 03</h3>
+                    <div class="price">499.00 DA</div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="placeholder-img" style="background: linear-gradient(135deg, #fbcfe8 0%, #f472b6 100%);"></div>
+                <div class="item-info">
+                    <h3>Premium Item 04</h3>
+                    <div class="price">349.00 DA</div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="placeholder-img" style="background: linear-gradient(135deg, #a7f3d0 0%, #34d399 100%);"></div>
+                <div class="item-info">
+                    <h3>Premium Item 05</h3>
+                    <div class="price">159.00 DA</div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="placeholder-img" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);"></div>
+                <div class="item-info">
+                    <h3>Premium Item 06</h3>
+                    <div class="price">229.00 DA</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button class="page-btn"><i data-lucide="chevron-left"></i></button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <span>...</span>
+            <button class="page-btn">12</button>
+            <button class="page-btn"><i data-lucide="chevron-right"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coming Soon</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Background code */
+.code-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.code-line {
+    position: absolute;
+    color: #38bdf8;
+    opacity: 0.08;
+    font-family: monospace;
+    font-size: 14px;
+    white-space: nowrap;
+    animation: move 20s linear infinite;
+}
+
+@keyframes move {
+    from {
+        transform: translateY(100vh);
+    }
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+/* Container */
+.container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 600px;
+    padding: 40px;
+}
+
+/* Logo */
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #38bdf8;
+}
+
+/* Title */
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Subtitle */
+p {
+    font-size: 18px;
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+/* Contact */
+.contact {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* Glow effects */
+.glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #38bdf8;
+    filter: blur(120px);
+    opacity: 0.2;
+    top: 20%;
+    left: 20%;
+    z-index: 1;
+}
+
+.glow2 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #9333ea;
+    filter: blur(120px);
+    opacity: 0.2;
+    bottom: 20%;
+    right: 20%;
+    z-index: 1;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Animated Code Background -->
+<div class="code-bg" id="codeBg"></div>
+
+<div class="glow"></div>
+<div class="glow2"></div>
+
+<div class="container">
+
+    <div class="logo">oussahmane</div>
+
+    <h1>🚀 Coming Soon</h1>
+
+    <p>We are building something amazing. Stay tuned for launch.</p>
+
+    <div class="contact">
+        Contact: oussahmane@gmail.com
+    </div>
+
+</div>
+
+<script>
+const codeSnippets = [
+    "const app = new Startup();",
+    "function buildFuture() { return success; }",
+    "while(!success) { tryAgain(); }",
+    "git commit -m 'launch soon'",
+    "npm install innovation",
+    "deploy();",
+    "if(user) { improveExperience(); }",
+    "AI.optimize(everything);",
+    "console.log('Coming Soon');",
+    "let vision = 'big';"
+];
+
+const container = document.getElementById("codeBg");
+
+for (let i = 0; i < 25; i++) {
+    let span = document.createElement("div");
+    span.classList.add("code-line");
+    span.innerText = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+
+    span.style.left = Math.random() * 100 + "vw";
+    span.style.animationDuration = (10 + Math.random() * 20) + "s";
+    span.style.fontSize = (12 + Math.random() * 6) + "px";
+
+    container.appendChild(span);
+}
+</script>
+
+</body>
+
+</html>
